@@ -1,12 +1,11 @@
 <filesystem>
 
     <folder name="QuickSearch">
-        <folder name="NetBeansZone">
-            <attr name="command" stringvalue="nb"/>
+        <folder name="EOPedia">
+            <attr name="command" stringvalue="eopedia"/>
             <attr name="position" intvalue="0"/>
-            <file name="org-netbeans-modules-nbzone-NBZoneSearchProvider.instance">
-                <attr name="displayName"
-                      bundlevalue="org.netbeans.modules.nbzone.Bundle#QuickSearch/NetBeansZone/org-netbeans-modules-nbzone-NBZoneSearchProvider.instance"/>
+            <file name="org-eomasters-eopedia-SearchProvider.instance">
+                <attr name="displayName" stringvalue="EOPedia"/>
             </file>
         </folder>
     </folder>
