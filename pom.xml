@@ -6,7 +6,9 @@
 
     <groupId>org.eomasters.eopedia</groupId>
     <artifactId>snap-eopedia</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <name>EOPedia Search Plugin</name>
+    <description>Allows to search the EOPedia Wiki. This plugin is brought to you by EOMasters</description>
+    <version>0.3.1-SNAPSHOT</version>
     <packaging>nbm</packaging>
 
     <properties>
@@ -21,6 +23,11 @@
     <dependencies>
         <dependency>
             <groupId>org.esa.snap</groupId>
+            <artifactId>snap-runtime</artifactId>
+            <version>${snap.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.esa.snap</groupId>
             <artifactId>snap-rcp</artifactId>
             <version>${snap.version}</version>
         </dependency>
@@ -32,9 +39,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.13.4.2</version>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.10</version>
         </dependency>
 
         <dependency>

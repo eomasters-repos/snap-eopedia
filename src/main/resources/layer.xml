@@ -4,7 +4,7 @@
         <folder name="EOPedia">
             <attr name="command" stringvalue="eopedia"/>
             <attr name="position" intvalue="0"/>
-            <file name="org-eomasters-eopedia-SearchProvider.instance">
+            <file name="org-eomasters-eopedia-EopediaSearchProvider.instance">
                 <attr name="displayName" stringvalue="EOPedia"/>
             </file>
         </folder>

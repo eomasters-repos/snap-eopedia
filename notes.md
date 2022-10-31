@@ -5,7 +5,7 @@ https://bits.netbeans.org/dev/javadoc/org-netbeans-spi-quicksearch/overview-summ
 # Mediawiki REST API
 https://www.mediawiki.org/wiki/API:Query
 
-#Plain Java Access
+# Plain Java Access
 https://stackoverflow.com/questions/33020645/get-brief-content-from-wikipedia-by-a-java-program
 
 # JavaScript access
@@ -19,3 +19,7 @@ https://www.youtube.com/watch?v=RPz75gcHj18&t=116s
 
 # Java Jackson JSON Tutorial with Examples.
 https://www.javaguides.net/p/java-jackson-json-tutorial-with-examples.html
+
+# GSON
+https://github.com/google/gson/blob/master/UserGuide.md
+https://sites.google.com/site/gson/gson-user-guide#TOC-Object-Examples
