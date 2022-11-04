@@ -32,9 +32,11 @@ public class Eopedia {
     public boolean openPage(String pageTitel) {
         if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
             try {
+                makePageTitleValid(pageTitel);
                 Desktop.getDesktop().browse(new URI(String.format(openUrl, pageTitel)));
                 return true;
             } catch (Throwable e) {
+                e.printStackTrace();
                 return false;
             }
         } else {
@@ -42,5 +44,9 @@ public class Eopedia {
         }
 
 
+    }
+
+    private String makePageTitleValid(final String pageTitel) {
+        return pageTitel.replace(' ', '_');
     }
 }
