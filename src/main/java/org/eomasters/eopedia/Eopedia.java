@@ -1,6 +1,7 @@
 package org.eomasters.eopedia;
 
 import com.google.gson.Gson;
+import org.esa.snap.rcp.SnapApp;
 
 import java.awt.Desktop;
 import java.io.BufferedReader;
@@ -8,8 +9,11 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.net.URL;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Eopedia {
+    private static Logger LOGGER = SnapApp.getDefault().getLogger();
 
     private final String searchUrl;
     private final String openUrl;
@@ -32,16 +36,13 @@ public class Eopedia {
     public boolean openPage(String pageTitel) {
         if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
             try {
-                makePageTitleValid(pageTitel);
-                Desktop.getDesktop().browse(new URI(String.format(openUrl, pageTitel)));
+                Desktop.getDesktop().browse(new URI(String.format(openUrl, makePageTitleValid(pageTitel))));
                 return true;
-            } catch (Throwable e) {
-                e.printStackTrace();
-                return false;
+            } catch (Throwable t) {
+                LOGGER.log(Level.SEVERE, String.format("Not able to open URL '%s' ", openUrl), t);
             }
-        } else {
-            return false;
         }
+        return false;
 
 
     }
