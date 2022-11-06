@@ -6,6 +6,7 @@ import org.netbeans.spi.quicksearch.SearchResponse;
 
 import java.io.IOException;
 
+// see https://netbeans.apache.org/tutorials/nbm-quick-search.html
 public class EopediaSearchProvider implements SearchProvider {
 
     @Override
