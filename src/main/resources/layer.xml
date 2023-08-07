@@ -1,11 +1,11 @@
 <filesystem>
 
     <folder name="QuickSearch">
-        <folder name="EOPedia">
-            <attr name="command" stringvalue="eopedia"/>
-            <attr name="position" intvalue="0"/>
+        <folder name="EOpedia">
+            <attr name="command" stringvalue="eop"/>
+            <attr name="position" intvalue="1"/>
             <file name="org-eomasters-eopedia-EopediaSearchProvider.instance">
-                <attr name="displayName" stringvalue="EOPedia"/>
+                <attr name="displayName" stringvalue="EOpedia"/>
             </file>
         </folder>
     </folder>
