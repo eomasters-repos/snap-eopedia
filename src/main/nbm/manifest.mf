@@ -3,7 +3,7 @@ AutoUpdate-Show-In-Client: true
 AutoUpdate-Essential-Module: false
 OpenIDE-Module-Layer: layer.xml
 OpenIDE-Module-Java-Dependencies: Java > 11
-OpenIDE-Module-Display-Category: EOMASTERS
+OpenIDE-Module-Display-Category: EOMasters
 OpenIDE-Module-Long-Description: <p>Search integration for EOpedia (<a href="https://www.eopedia.org">www.eopedia.org</a>) in SNAP.</p>
  <p><b>Vendor: </b>EOMasters</p>
  <p><b>Web: </b><a href="https://www.eomasters.org">www.eomasters.org</a></p>
