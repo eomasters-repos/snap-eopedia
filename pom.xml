@@ -138,4 +138,13 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <developers>
+        <developer>
+            <id>marco</id>
+            <name>Marco Peters</name>
+            <email>marco@eomasters.org</email>
+            <organization>EOMasters</organization>
+        </developer>
+    </developers>
 </project>
