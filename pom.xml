@@ -9,7 +9,7 @@
     <name>EOpedia Search Plugin</name>
     <url>https://www.eopedia.org</url>
     <description>Allows to search the EOpedia Wiki. Made by EOMasters</description>
-    <version>1.0</version>
+    <version>1.1-SNAPSHOT</version>
     <packaging>nbm</packaging>
     <inceptionYear>2022</inceptionYear>
     <organization>
