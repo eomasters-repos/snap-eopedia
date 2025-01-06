@@ -1,0 +1,53 @@
+table.eom_ft{
+  width:100%;
+}
+
+td.eom_ft {
+  border-style:none;
+  text-align:left;
+  vertical-align: middle;
+}
+
+td div.eom_ft {
+  font-size:130%
+}
+
+.borderless {
+  border: none;
+}
+
+.codenote {
+  font-family: monospace;
+  font-size: 100%;
+  color: #000000;
+  background-color: #f0f0f0;
+  padding: 1px;
+  border: 1px solid #cccccc;
+}
+
+code {
+  font-family: monospace;
+  font-size: 100%;
+  color: #000000;
+  background-color: #f0f0f0;
+  padding: 1px;
+  border: 1px solid #cccccc;
+}
+
+img.vCenter {
+  vertical-align: middle;
+}
+
+td {
+    font-size: 12;
+}
+
+.attention {
+    padding: 5px;
+    background-color: #DDDDDD;
+    border-width: medium;
+    border-color: #090909;
+    border-style: double;
+    display: inline-block;
+    margin: 20px 50px
+}

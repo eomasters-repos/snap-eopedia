@@ -7,6 +7,6 @@
 
 <toc version="2.0" categoryclosedimage="folder" categoryopenimage="folder" topicimage="doc">
     <tocitem text="Sentinel Toolbox Application">
-        <tocitem text="EOPedia Search" target="SearchEOPedia"/>
+        <tocitem text="EOpedia Search" target="SearchEOpedia"/>
     </tocitem>
 </toc>

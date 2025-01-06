@@ -7,17 +7,29 @@
     <groupId>org.eomasters</groupId>
     <artifactId>eopedia4snap</artifactId>
     <name>EOpedia Search Plugin</name>
-    <description>Allows to search the EOpedia Wiki. This plugin is brought to you by EOMasters</description>
+    <url>https://www.eopedia.org</url>
+    <description>Allows to search the EOpedia Wiki. Made by EOMasters</description>
     <version>0.3.1-SNAPSHOT</version>
     <packaging>nbm</packaging>
-
+    <inceptionYear>2022</inceptionYear>
+    <organization>
+        <name>EOMasters</name>
+        <url>https://www.eomasters.org</url>
+    </organization>
+    <licenses>
+    <license>
+        <name>GPL 3</name>
+        <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+    </license>
+    </licenses>
     <properties>
-        <snap.version>10.0.0-SNAPSHOT</snap.version>
+        <snap.version>11.0.0</snap.version>
         <netbeans.version>RELEASE113</netbeans.version>
         <javahelp.version>2.0.05</javahelp.version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <deploy.dir>${project.build.directory}/mvn-repo</deploy.dir>
     </properties>
 
     <dependencies>
@@ -60,6 +72,42 @@
     <build>
         <plugins>
             <plugin>
+                <!-- use mvn license:remove-file-header to remove the header and regenerate it-->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>license-maven-plugin</artifactId>
+                <version>2.4.0</version>
+                <configuration>
+                    <licenseResolver>${project.baseUri}/.mvn/license</licenseResolver>
+                    <licenseName>eom_gpl_v3</licenseName>
+                    <copyrightOwners>Marco Peters</copyrightOwners>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.html</include>
+                    </includes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>UpdateHeaders</id>
+                        <phase>process-sources</phase>
+                        <goals>
+                            <goal>update-file-header</goal>
+                        </goals>
+                        <configuration>
+                            <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
+                            <emptyLineAfterHeader>true</emptyLineAfterHeader>
+                            <canUpdateDescription>false</canUpdateDescription>
+                            <canUpdateCopyright>true</canUpdateCopyright>
+                            <processStartTag>========================LICENSE_START=================================</processStartTag>
+                            <processEndTag>=========================LICENSE_END==================================</processEndTag>
+                            <sectionDelimiter>======================================================================
+                            </sectionDelimiter>
+                            <descriptionTemplate>.mvn/license/file_header_description.txt</descriptionTemplate>
+                        </configuration>
+                    </execution>
+                </executions>
+
+            </plugin>
+            <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
@@ -83,6 +131,19 @@
                 <version>3.0.0</version>
             </plugin>
             <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.0</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.netbeans.utilities</groupId>
                 <artifactId>nbm-maven-plugin</artifactId>
                 <version>4.4</version>
@@ -95,10 +156,10 @@
                     </dependency>
                 </dependencies>
                 <configuration>
-                    <homePageUrl>https://www.eomasters.org</homePageUrl>
+                    <homePageUrl>https://www.eomasters.org/knowledge/eopedia</homePageUrl>
                     <licenseName>GPL 3</licenseName>
                     <licenseFile>${project.basedir}/LICENSE.html</licenseFile>
-                    <requiresRestart>true</requiresRestart>  <!--todo - necessary?-->
+                    <requiresRestart>true</requiresRestart>
                     <keystore>${project.basedir}/keystore/key.ks</keystore>
                     <keystorealias>snap</keystorealias>
                     <keystorepassword>snap-123</keystorepassword>
@@ -138,6 +199,13 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>internal</id>
+            <url>file://${deploy.dir}</url>
+        </repository>
+    </distributionManagement>
 
     <developers>
         <developer>
