@@ -24,4 +24,4 @@ post on the [EOMasters forum](https://www.eomasters.org/forum).
 
 ## Release Notes
 
-The release notes can be found [here](https://github.com/eomasters-repos/eomtbx/releases).
+The release notes can be found [here](https://github.com/eomasters-repos/snap-eopedia/releases).
